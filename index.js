@@ -1,13 +1,16 @@
-setTimeout(() => {
-  console.log("Timer stops");
-}, 5000);
+import fs from "fs";
 
-function x(y) {
-  console.log("x is called");
+const fsPromises = fs.promises;
 
-  y();
+async function readFile() {
+  try {
+    // let x = await fs.open("a.txt", "r", 0o666);
+    let x = await fsPromises.readFile("a.txt", "utf8");
+
+    console.log(x);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-x(() => {
-  console.log("y is called");
-});
+readFile();
