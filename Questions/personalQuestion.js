@@ -34,7 +34,7 @@ value is string
 
 /* 
 6) whats name of operator "?." or  ?.
-question dot operator
+question and dot operator
 */
 
 /* 
@@ -59,8 +59,8 @@ console.log(guessTheOutput)
 const value1 = undefined
 const value2 = null
 
-console.log(value1 === value2)                          // ?
-console.log(value1 == value2)                           // ?
+console.log(value1 === value2)                              // guess the Output
+console.log(value1 == value2)                               // guess the Output
 */
 
 /* 
@@ -151,7 +151,7 @@ const obj1 = {
     name :"Mohit"
 }
 
-const {} = obj                                          // do something to rename <name to firstName>. only in one line
+const {} = obj                                              // do something to rename <name to firstName>. only in one line
 
 console.log(firstName); // Mohit 
  */
@@ -163,26 +163,26 @@ console.log(firstName); // Mohit
 // take start of week till end of week total 7 days 
 
 i need object in this from 
-const array = {
-    07-05-2023 :{
-        dayName:"sunday"
-    }
-    08-05-2023 :{
+const object = {                                            //note key will be date and value will be object 
+    "07-05-2023" :{                                           //          
+        dayName:"sunday"                                    //          key will be date in same format
+    }                                                       //          value will be object
+    "08-05-2023" :{
         dayName:"monday"
     }
-    09-05-2023 :{
+    "09-05-2023" :{
         dayName:"tuesday"
     }
-    10-05-2023 :{
+    "10-05-2023" :{
         dayName:"wednesday"
     }
-    11-05-2023 :{
+    "11-05-2023" :{
         dayName:"thursday"
     }
-    12-05-2023 :{
+    "12-05-2023" :{
         dayName:"friday"
     }
-    13-05-2023 :{
+    "13-05-2023" :{
         dayName:"saturday"
     }
 } 
