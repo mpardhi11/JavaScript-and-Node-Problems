@@ -200,3 +200,13 @@ const object = {                                            //note key will be d
 5) name data types supported by JSON tip:  total 6 datatype
 6) method name convert JSON to string
 */
+
+/* 
+function hello () {
+console.log("Hello World!");
+}
+
+const  x = hello            // 
+console.log (x)             // guess the output
+console.log (x())           // guess the output
+*/

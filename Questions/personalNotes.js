@@ -9,12 +9,18 @@ ex. interface BankDetails {}
 */
 
 /* 
-3) env variable naming convection are all uppercase
+3) env variable naming convection are all uppercase and Snake case
 ex       NODE_ENV
 DB_NAME
 DB_USER
 */
 
 /* 
+4) Definition 
+function hello () {
+console.log("Hello World!");
+}                                                           // called function definition
 
+x                                                           // called function reference
+x()                                                         // called function execution
 */
