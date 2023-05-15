@@ -210,3 +210,20 @@ const  x = hello            //
 console.log (x)             // guess the output
 console.log (x())           // guess the output
 */
+
+/* 
+guess the output
+function hello (userName) {
+console.log(`Hello ${userName}!`);
+}
+
+hello("Mohit")
+hello("")
+hello()
+*/
+
+/* 
+Que) how  many scope in Javascript
+Que) name the scope in Javascript
+
+*/

@@ -23,4 +23,16 @@ console.log("Hello World!");
 
 x                                                           // called function reference
 x()                                                         // called function execution
+
+*/
+
+/* 
+enums / ENUMS fallow UPPERCASE Rule
+
+enum {
+    APPROVED,
+    REJECTED
+}
+
+
 */
