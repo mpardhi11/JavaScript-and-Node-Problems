@@ -1,0 +1,113 @@
+===>			Tell me about yourself.
+
+Hello everyone, my name is Mohit. I am a MERN Stack engineer. currently associated with AIT Global as SR. Associate Engineer for the past 2 years. carrying a total of 2.3 years of experience as a developer.
+
+I have expertise in backend development. With Node JS Express JS and databases such as MongoDB, MYSQL, and MariaDB, I work on TypeScript and JavaScript to create back-end code.
+-------------------------------------------------------------------------------------------------------------------------
+
+===>			Can you tell me the difference between async.parallel vs async.series?
+npm i async
+
+Certainly! In the context of the async library in JavaScript, async.parallel and async.series are both functions used to handle asynchronous operations, but they differ in how they execute those operations.
+
+async.parallel:
+async.parallel is used when you want to run multiple asynchronous tasks simultaneously (in parallel) and then execute a callback once all of them are complete. It accepts an object or an array of functions (tasks), and it runs all tasks concurrently. The callback is invoked with an array of results, where each result corresponds to the completion of the corresponding task.
+
+Example with an array of functions:
+
+javascript
+Copy code
+const async = require('async');
+
+async.parallel([
+    function(callback) {
+        // Task 1
+        callback(null, 'Result 1');
+    },
+    function(callback) {
+        // Task 2
+        callback(null, 'Result 2');
+    }
+], function(err, results) {
+    // Both tasks are completed
+    console.log(results); // ['Result 1', 'Result 2']
+});
+
+async.series:
+async.series, on the other hand, is used when you want to run asynchronous tasks in a specific order, one after the other (in series). It also accepts an array or object of functions, but it runs them sequentially. The next task will not start until the previous one has completed.
+
+Example with an array of functions:
+
+javascript
+Copy code
+const async = require('async');
+
+async.series([
+    function(callback) {
+        // Task 1
+        callback(null, 'Result 1');
+    },
+    function(callback) {
+        // Task 2 (will only start when Task 1 is complete)
+        callback(null, 'Result 2');
+    }
+], function(err, results) {
+    // Both tasks are completed in order
+    console.log(results); // ['Result 1', 'Result 2']
+});
+
+In summary, async.parallel is for running tasks concurrently, while async.series is for running tasks sequentially. The choice between them depends on the specific requirements of your application and how you want to handle the flow of asynchronous operations.
+-----------------------------------------------------------------------------------------------------------------------
+===>			Can you tell me the difference between promise.all() vs promise.allSetteld()?
+
+Certainly! Both Promise.all() and Promise.allSettled() are methods provided by the native JavaScript Promise API, but they differ in how they handle the resolution of the promises in the array.
+
+Promise.all():
+Behavior on Rejection: It returns a single promise that is rejected as soon as one of the input promises is rejected. This means if any promise in the array is rejected, the entire Promise.all() operation is rejected.
+
+Fulfillment Results: The resulting promise is fulfilled with an array of results when all input promises are fulfilled. The order of the results in the array corresponds to the order of the input promises.
+
+Example:
+
+javascript
+Copy code
+const promise1 = Promise.resolve('Result 1');
+const promise2 = Promise.resolve('Result 2');
+const promise3 = Promise.reject(new Error('Rejected'));
+
+Promise.all([promise1, promise2, promise3])
+    .then(results => console.log(results))
+    .catch(error => console.error(error)); // Outputs: Error: Rejected
+
+Promise.allSettled():
+Behavior on Rejection: It waits for all the promises in the array to settle (either fulfilled or rejected) and then returns a promise that is always fulfilled. It does not short-circuit on the first rejection.
+
+Result Format: The resulting promise is fulfilled with an array of objects, each representing the outcome of the corresponding promise. Each object has a status property that is either "fulfilled" or "rejected", and a value or reason property that contains the fulfillment value or rejection reason, respectively.
+
+Example:
+
+javascript
+Copy code
+const promise1 = Promise.resolve('Result 1');
+const promise2 = Promise.resolve('Result 2');
+const promise3 = Promise.reject(new Error('Rejected'));
+
+Promise.allSettled([promise1, promise2, promise3])
+    .then(results => console.log(results))
+    .catch(error => console.error(error));
+// Outputs: [ { status: 'fulfilled', value: 'Result 1' },
+//            { status: 'fulfilled', value: 'Result 2' },
+//            { status: 'rejected', reason: Error: Rejected }]
+
+Summary:
+Use Promise.all() when you want the entire operation to fail if any of the promises is rejected, and you only need the final result when all promises are fulfilled.
+
+Use Promise.allSettled() when you want to know the outcome of all promises, regardless of whether they were fulfilled or rejected, and you don't want the entire operation to fail immediately if one of the promises is rejected.
+
+The choice between them depends on the specific requirements of your application and how you want to handle the results of the promises.
+-----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+

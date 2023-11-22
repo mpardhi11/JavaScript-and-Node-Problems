@@ -34,5 +34,20 @@ enum {
     REJECTED
 }
 
+*/
+
+/* 
+function addOne (num) {         // meaning function
+    return num+1
+}
+
+addOne(5);
+
+const addTwo = function addOne (num) {         // meaning expression
+    return num+1
+}
+
+addOTwo(5);
+
 
 */

@@ -1,0 +1,23 @@
+Tell me about yourself.
+Your area of interest 
+Tell me about your technical carrier.
+Whats your role and responsibilities
+How node JS is different? As compared to other technologies like Java. Python.net, etc.
+How to perform synchronise operation in node JS? (CB, Async Await, Promise)
+Callback, promise, async, await. Among these which you prefer most and why? 
+Can you tell me the difference between async.parallel vs async.series?
+Can you tell me the difference between promise.all() vs promise.allSetteld()?
+What are the globals provided by node in node project itself? 
+In any NODE project, how do you check the NPM packages you are using are safe or not? There are any vulnerabilities Or they are outdated or deprecated?
+What kind of framework on you which work?
+Are you work on node JS framework other than express JS?
+What is middleware in express JS?
+How will you handle an exception that has occurred? out of try catch block. I am not saying in try catch its out of try catch. You have no idea where it occurs; for example we can say global level.
+What is catchable vs unhandled exception?
+Can you tell me difference between NPM and YARN?
+Can you tell me what package.JSON contains? And what other kind of section it has in package.JSON file.
+Difference between dependancy vs dev dependancy?
+What is LTS? and LTS vs current version?
+How do you deal with authorization and authentication in request response cycle?
+Can you tell me what is JWT token? What JWT token contents? What kind of hashing algorithm used for creating JWT? And how long or what kind of lifetime JWT token has?
+While creating JWT token. If I didn't pass any timing, then whats default timing? When it's got expired.
