@@ -1,16 +1,20 @@
-import fs from "fs";
-
-const fsPromises = fs.promises;
-
-async function readFile() {
-  try {
-    // let x = await fs.open("a.txt", "r", 0o666);
-    let x = await fsPromises.readFile("a.txt", "utf8");
-
-    console.log(x);
-  } catch (error) {
-    console.log(error);
-  }
+function memo() {
+  let cache = {};
+  return (value) => {
+    if (value in cache) {
+      console.log("cache.value", cache[value]);
+      return cache.value;
+    } else {
+      const result = value ** 2;
+      cache[value] = result;
+      console.log("memo ~ result: 👆👆👆👆👆👆👆", result);
+      return result;
+    }
+  };
 }
 
-readFile();
+const square = memo();
+
+square(20);
+square(20);
+square(40);
