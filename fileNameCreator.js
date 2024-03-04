@@ -8,6 +8,6 @@ const unixTimestamp = moment().unix();
 const formattedDate = moment().format("YYYY-MM-DD_HH_mm_ss_A");
 
 // Combine the components to create the desired string
-const resultString = `JavaScript-${unixTimestamp}-${formattedDate}`;
+const resultString = `JavaScript-${formattedDate}-${unixTimestamp}`;
 
 console.log(resultString);
