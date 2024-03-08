@@ -16,7 +16,7 @@ How will you handle an exception that has occurred? out of try catch block. I am
 What is catchable vs unhandled exception?
 Can you tell me difference between NPM and YARN?
 Can you tell me what package.JSON contains? And what other kind of section it has in package.JSON file.
-Difference between dependancy vs dev dependancy?
+Difference between dependency vs dev dependency?
 What is LTS? and LTS vs current version?
 How do you deal with authorization and authentication in request response cycle?
 Can you tell me what is JWT token? What JWT token contents? What kind of hashing algorithm used for creating JWT? And how long or what kind of lifetime JWT token has?
