@@ -1,20 +1,27 @@
-function memo() {
-  let cache = {};
-  return (value) => {
-    if (value in cache) {
-      console.log('cache.value', cache[value]);
-      return cache.value;
-    } else {
-      const result = value ** 2;
-      cache[value] = result;
-      console.log('memo ~ result: 👆👆👆👆👆👆👆', result);
-      return result;
-    }
-  };
+// 1. Regular function call
+function greet(name) {
+  return `Hello, ${name}`;
 }
+console.log(greet('Alice'));
 
-const square = memo();
+// 2. Method call (function as an object property)
+const person = {
+  name: 'Bob',
+  greet: function () {
+    return `Hello, ${this.name}`;
+  },
+};
+console.log(person.greet());
 
-square(20);
-square(20);
-square(40);
+// 3. Constructor call (using new)
+function User() {
+  this.name = 'mohit';
+}
+const user1 = new User(); // new User <without moon barackets >  (this will also execute the function)
+console.log(user1.name);
+
+// 4. Indirect call using call() or apply()
+function introduce(city) {
+  return `${this.name} lives in ${city}`;
+}
+console.log(introduce.call(user1, 'New York'));
