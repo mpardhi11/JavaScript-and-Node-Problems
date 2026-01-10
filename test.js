@@ -1,7 +1,19 @@
-function hof() {
-  return () => 'Hello World';
+function show() {
+  let sum = 0;
+  let message = `sum is ${sum}`;
+
+  function print() {
+    console.log('!==>  ~ message <==!', message);
+  }
+
+  function increase() {
+    sum = sum + 10;
+  }
+
+  return [print, increase];
 }
 
-const value = hof();
-
-console.log(value());
+const [print, increase] = show();
+print();
+increase();
+print();
